@@ -13,7 +13,7 @@
 }
 .debug .main-nav{
     background-color: lightcoral;
-    width: 6.25rem;
+    width: 9.375rem;
 }
 .debug .main-view header{
     background-color: lightblue;
@@ -37,6 +37,7 @@
 /* MAIN NAV LEFT */
 .main-nav{
     height: calc(100vh - 3.125rem);
+    padding: .625rem .625rem .3125rem .625rem;
     
 }
 .main-nav .row{
@@ -48,13 +49,56 @@
 .nav-footer{
     align-self: flex-end;
 }
+.logo img{
+    width: 3.125rem;
+}
+
+.logo h1,
+.logo img,
+ul .img,
+ul span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul img{
+    width: 2.1875rem;
+}
+
+.add-playlist-button{
+    background-color: grey;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
 
 
+.nav-footer .img{
+    display: inline-block;
+    width: 1.25rem;
+    vertical-align: middle;
+}
+.download span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.download{
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+.nav-footer{
+    width: 100%;
+}
 
 /* MAIN view */
 .main-view{
     
-    width: calc(100% - 6.25rem);
+    width: calc(100% - 9.375rem);
     /* minus width of left nav */
     position: relative;
 }
