@@ -6,3 +6,38 @@
 @import url(common.css);
 
 /* DEBUG */
+.debug .footer{
+    background-color: lightblue;
+}
+
+
+/* MAIN */
+
+
+
+/* FOOTER */
+
+/* 
+------------------------
+------------------------
+    RESPONSIVE
+------------------------
+------------------------
+*/
+
+/* TABLET */
+@media screen and (max-width: 1100px) {
+    
+}
+
+/* MOBILE M */
+
+@media screen and (max-width: 700px) {
+    
+}
+
+/* MOBILE S */
+
+@media screen and (max-width: 600px) {
+    
+}
