@@ -29,6 +29,7 @@
 }
 
 /* MAIN */
+
 .row-main-viewport{
     display: flex;
 }
@@ -46,7 +47,7 @@
 
 /* MAIN view */
 .main-view{
-    overflow-y: scroll;
+    
     width: calc(100% - 12.5rem);
     position: relative;
 }
@@ -66,9 +67,12 @@
     border-radius: .9375rem;
     line-height: normal;
 }
+
 /* main CONTENT */
 .main-view .main-content{
     padding: .625rem;
+    overflow-y: auto;
+    height: 100vh;
 }
 .main-view .main-content nav{
     margin-top: 3.125rem;
@@ -93,7 +97,8 @@
 /* FOOTER */
 footer{
     width: 100vw;
-   
+    position: fixed;
+    bottom: 0;
 }
 /* 
 ------------------------
