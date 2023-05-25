@@ -15,8 +15,17 @@
     background-color: lightcoral;
     width: 12.5rem;
 }
-.debug .main-content header{
+.debug .main-view header{
     background-color: lightblue;
+    height: 3.125rem;
+}
+.debug .main-view .main-content nav{
+    border: 2px dotted lightgreen;
+}
+.debug .item{
+    border: 1px solid black;
+    background-color: lightseagreen;
+    height: 100px;
 }
 
 /* MAIN */
@@ -35,11 +44,52 @@
 }
 
 
-/* MAIN CONTENT */
-.main-content{
+/* MAIN view */
+.main-view{
     overflow-y: scroll;
     width: calc(100% - 12.5rem);
+    position: relative;
 }
+/* main header */
+.main-view header{
+    text-align: end;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    line-height: 3.125rem;
+    vertical-align: middle;
+}
+.main-view header .button{
+    display: inline-block;
+    padding: .3125rem;
+    border: 1px solid white;
+    border-radius: .9375rem;
+    line-height: normal;
+}
+/* main CONTENT */
+.main-view .main-content{
+    padding: .625rem;
+}
+.main-view .main-content nav{
+    margin-top: 3.125rem;
+    text-align: center;
+}
+.main-view .main-content li{
+    display: inline-block;
+}
+
+/*    ITEMS PLAYED */
+.main-content .row{
+    margin: 0 -0.625rem;
+}
+
+.item-1-6{
+    width: calc((100% / 6) - 1.25rem);
+    margin: .625rem;
+}
+
+
+
 /* FOOTER */
 footer{
     width: 100vw;
@@ -55,13 +105,17 @@ footer{
 
 /* TABLET */
 @media screen and (max-width: 1100px) {
-    
+    /* .item-1-4{
+        width: calc((100% / 4) - 1.25rem);
+    } */
 }
 
 /* MOBILE M */
 
 @media screen and (max-width: 700px) {
-    
+    .item-1-2{
+        width: calc((100% / 2) - 1.25rem);
+    }
 }
 
 /* MOBILE S */
