@@ -41,9 +41,12 @@
     /* minus footer height */
 }
 .nav-footer{
+    /* MUST CHANGE TO FLEX-end */
     position: absolute;
     bottom: 0;
 }
+
+
 
 
 /* MAIN view */
@@ -106,6 +109,12 @@ footer{
     position: fixed;
     bottom: 0;
 }
+footer .row{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
 /* 
 ------------------------
 ------------------------
@@ -132,5 +141,8 @@ footer{
 /* MOBILE S */
 
 @media screen and (max-width: 600px) {
-    
+    .main-nav span,
+    .main-nav .playlist{
+        display: none;
+    }
 }
