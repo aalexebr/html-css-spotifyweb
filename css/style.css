@@ -37,15 +37,17 @@
 /* MAIN NAV LEFT */
 .main-nav{
     height: calc(100vh - 3.125rem);
-    position: relative;
-    /* minus footer height */
+    
+}
+.main-nav .row{
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .nav-footer{
-    /* MUST CHANGE TO FLEX-end */
-    position: absolute;
-    bottom: 0;
+    align-self: flex-end;
 }
-
 
 
 
