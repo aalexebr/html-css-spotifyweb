@@ -249,9 +249,9 @@ footer .footer-row{
     height: 100%;
    
 }
-.footer-row .col-1-3{
+/* .footer-row .col-1-3{
     width: calc(100% / 3);
-}
+} */
 
 footer .file > div{
     margin: 0 5px;
@@ -276,6 +276,12 @@ footer .file > div{
 }
 
 /* play funcions footer */
+.play-functions{
+    max-width: 400px;
+    flex-grow: 2;
+}
+
+
 
 .track-control{
     text-align: center;
@@ -287,21 +293,31 @@ footer .file > div{
 .track-control li .fa-circle-play{
     font-size: larger;
 }
+
+
 .play-bar.row{
     align-items: center;
     justify-content: center;
+
 }
+
 .time-played,
 .tot-time{
-    width: calc(100% / 6);
+    width: calc((100% / 6) - 10px);
+    line-height: 20px;
+    vertical-align: middle;
+    font-size: .625rem;
+    margin: 0 5px;
+    font-weight: bold;
 }
 
 .scroll-time{
     border: 2px solid #7B7D82;
     border-radius: 50px;
-    width: calc((100% / 6) * 4);
+    width: calc(((100% / 6) * 4) - 10px);
     position: relative;
-    height: 3px;
+   
+    
 }
 
 .time-elapsed,
@@ -313,7 +329,7 @@ footer .file > div{
     left: -2px;
     top: 50%;
     transform: translate(0 , -50%);
-    height: 3px;
+    
 }
 
 .tot-time{
@@ -323,20 +339,22 @@ footer .file > div{
 .track-control .fa-circle-play:hover{
     transform: scale(1.2);
 }
-.time-elapsed:hover,
-.current-volume:hover{
+.scroll-time:hover .time-elapsed{
     border-color: red;
     color: red;
 }
-
+.volume-bar:hover .current-volume{
+    border-color: red;
+    color: red;
+}
 /*  */
 .device-functions.row{
     align-items: center;
     justify-content: end;
 }
 .device-functions > div{
-    padding: 0 5px;
-
+    padding: 0 7px;
+    font-size: .5rem;
 }
 .device-functions .volume-bar{
     border: 2px solid #7B7D82;
