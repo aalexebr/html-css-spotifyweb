@@ -13,7 +13,7 @@
 }
 .debug .main-nav{
     background-color: lightcoral;
-    width: var(--left-nav-width);
+    
 }
 .debug .main-view header{
     
@@ -51,9 +51,9 @@ main{
     justify-content: space-between; */
     /* align-items: flex-start; */
 }
-.nav-footer{
+/* .nav-footer{
     align-self: flex-end;
-}
+} */
 .logo img{
     width: 2.5rem;
 }
@@ -97,9 +97,10 @@ ul img{
     width: 100%;
 }
 .nav-footer{
-    width: 100%;
+    
     position: fixed;
     bottom: var(--footer-height);
+    /* padding: .625rem .625rem .3125rem .625rem;; */
 
 }
 
@@ -198,7 +199,7 @@ ul img{
     color: rgba(255, 255, 255, 0.674);
     position: relative;
     top: 50%;
-    font-size: 2rem;
+    font-size: 3rem;
     transform: translate(0 , -50%);
 }
 .item:hover .overlay{
@@ -213,15 +214,18 @@ footer{
     padding: 0 .625rem;
     height: var(--footer-height);
 }
-footer .row{
+footer .footer-row{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    flex-wrap: wrap;
     
 }
 
+
 footer .file > div{
-    margin-right: .625rem;
+    
 }
 
 .file .img{
@@ -230,10 +234,14 @@ footer .file > div{
 
 .file-icons > div{
     display: inline-block;
-    padding: 0 .5rem;
+    
 }
 
 /* play funcions footer */
+
+.play-functions.row{
+    
+}
 .track-control{
     text-align: center;
 }
@@ -247,24 +255,26 @@ footer .file > div{
 
 .play-bar.row{
     align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
     
 }
-.play-bar > div{
-    display: inline-block;
-}
+
 .scroll-time{
-    width: 35vw;
     border: 2px solid greenyellow;
     border-radius: 50px;
 }
 
+
+
+/*  */
 .device-functions > div{
     padding: 0 5px;
 
 }
 .device-functions .volume-bar{
     border: 2px solid red;
-    width: 10vw;
+    width: 10px;
     border-radius: 50px;
 }
 
@@ -304,5 +314,17 @@ footer .file > div{
     .file-icons.row{
         flex-direction: column;
         justify-content: center;
+    }
+
+    .main-nav{
+        
+        width: var(--left-nav-small);
+        
+    }
+    .main-view{
+    
+        width: calc(100vw - var(--left-nav-small));
+        /* minus width of left nav */
+        
     }
 }
