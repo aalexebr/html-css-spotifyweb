@@ -21,8 +21,12 @@ img{
     width: 100%;
 }
 
-
-
+.title{
+    color: white;
+}
+.subtitle{
+    color: #7B7D82;
+}
 
 /* fixed dimensions */
 
