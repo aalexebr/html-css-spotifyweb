@@ -184,6 +184,27 @@ ul img{
     font-size: 0.625rem;
 }
 
+.item .img{
+    position: relative;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+.overlay i{
+    color: rgba(255, 255, 255, 0.674);
+    position: relative;
+    top: 50%;
+    font-size: 2rem;
+    transform: translate(0 , -50%);
+}
+.item:hover .overlay{
+    display: block;
+}
+
 /* FOOTER */
 footer{
     width: 100vw;
@@ -198,6 +219,7 @@ footer .row{
     height: 100%;
     
 }
+
 footer .file > div{
     margin-right: .625rem;
 }
