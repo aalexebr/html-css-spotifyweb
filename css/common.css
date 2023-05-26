@@ -28,6 +28,14 @@ img{
     color: #7B7D82;
 }
 
+li:hover{
+    color: white;
+}
+
+
+
+
+
 /* fixed dimensions */
 
 :root{

@@ -265,11 +265,17 @@ footer .file > div{
     display: inline-block;
     align-self: center;
     padding: 5px;
+    color: #7B7D82;
+}
+/* hovers */
+.file .subtitle:hover{
+    text-decoration: underline;
+}
+.file-icons > div:hover{
+    color: white;
 }
 
 /* play funcions footer */
-
-
 
 .track-control{
     text-align: center;
@@ -298,7 +304,8 @@ footer .file > div{
     height: 3px;
 }
 
-.time-elapsed{
+.time-elapsed,
+.current-volume{
     position: absolute;
     width: 25%;
     border-radius: 50px;
@@ -309,16 +316,18 @@ footer .file > div{
     height: 3px;
 }
 
-
-
-
 .tot-time{
     text-align: end;
 }
-
-
-
-
+/* hovers */
+.track-control .fa-circle-play:hover{
+    transform: scale(1.2);
+}
+.time-elapsed:hover,
+.current-volume:hover{
+    border-color: red;
+    color: red;
+}
 
 /*  */
 .device-functions.row{
@@ -330,9 +339,10 @@ footer .file > div{
 
 }
 .device-functions .volume-bar{
-    border: 2px solid red;
+    border: 2px solid #7B7D82;
     width: 75px;
     border-radius: 50px;
+    position: relative;
 }
 
 
