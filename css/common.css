@@ -27,7 +27,7 @@ img{
 /* fixed dimensions */
 
 :root{
-    --footer-height: 50px;
+    --footer-height: 65px;
     --left-nav-width: 150px;
     --left-nav-small: 50px;
 }
