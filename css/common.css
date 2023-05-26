@@ -42,9 +42,11 @@ li:hover{
     --footer-height: 65px;
     --left-nav-width: 200px;
     --left-nav-small: 50px;
+    --time-elapsed: 25%;
 }
 /* 
      var(--footer-height)
      var(--left-nav-width)
      var(--left-nav-small)
+     var(--time-elapsed)
 */

@@ -55,6 +55,7 @@
     justify-content: space-between;
     height: calc(100vh - var(--footer-height));
     padding: 10px;
+    padding-bottom: 0;
     flex-wrap: nowrap;
 }
 
@@ -100,13 +101,14 @@ ul img{
 /* playlist */
 .your-playlist{
     overflow-y: auto;
-    height: 100px;
+    height: 50px;
 }
 .playlist *{
     margin-bottom: 5px;
 }
-
-
+.playlist{
+    flex-grow: 2;
+}
 /* nav left footer */
 .nav-footer .img{
     display: inline-block;
@@ -121,7 +123,9 @@ ul img{
     border-bottom: 2px solid white;
     width: 100%;
 }
-
+.nav-footer{
+    height: 50px;
+}
 
 
 
@@ -312,21 +316,20 @@ footer .file > div{
 }
 
 .scroll-time{
-    border: 2px solid #7B7D82;
+    background-color: #7B7D82;
     border-radius: 50px;
     width: calc(((100% / 6) * 4) - 10px);
     position: relative;
-   
-    
+    height: 4px;
 }
 
-.time-elapsed,
-.current-volume{
+.time-elapsed{
     position: absolute;
-    width: 25%;
+    width: var(--time-elapsed);
     border-radius: 50px;
-    border: 2px solid rgb(255, 179, 47);
-    left: -2px;
+    height: 4px;
+    background-color: orange;
+    left: 0;
     top: 50%;
     transform: translate(0 , -50%);
     
@@ -335,18 +338,36 @@ footer .file > div{
 .tot-time{
     text-align: end;
 }
+
 /* hovers */
 .track-control .fa-circle-play:hover{
     transform: scale(1.2);
 }
 .scroll-time:hover .time-elapsed{
-    border-color: red;
-    color: red;
+    
+    background-color: red;
 }
 .volume-bar:hover .current-volume{
-    border-color: red;
-    color: red;
+    
+    background-color: red;
 }
+.scroll-button{
+    background-color: white;
+    position: absolute;
+    left: var(--time-elapsed);
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+    display: none;
+}
+.scroll-time:hover .scroll-button,
+.volume-bar:hover .scroll-button{
+    display: block;
+}
+
 /*  */
 .device-functions.row{
     align-items: center;
@@ -357,12 +378,23 @@ footer .file > div{
     font-size: .5rem;
 }
 .device-functions .volume-bar{
-    border: 2px solid #7B7D82;
+    background-color: #7B7D82;
     width: 75px;
     border-radius: 50px;
     position: relative;
+    height: 4px;
 }
-
+.current-volume{
+    position: absolute;
+    width: 25%;
+    border-radius: 50px;
+    height: 4px;
+    background-color: orange;
+    left: 0;
+    top: 50%;
+    transform: translate(0 , -50%);
+    
+}
 
 /* 
 ------------------------
