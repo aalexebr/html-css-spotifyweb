@@ -18,4 +18,21 @@ a{
 
 img{
     display: block;
+    width: 100%;
 }
+
+
+
+
+/* fixed dimensions */
+
+:root{
+    --footer-height: 50px;
+    --left-nav-width: 150px;
+    --left-nav-small: 50px;
+}
+/* 
+     var(--footer-height)
+     var(--left-nav-width)
+     var(--left-nav-small)
+*/
