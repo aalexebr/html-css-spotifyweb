@@ -142,7 +142,9 @@ aside .row .playlist{
     display: flex;
     align-items: center;
 }
-
+.create-playlist span{
+    margin-left: 5px;
+}
 
 /* nav left footer */
 .nav-footer .img{
@@ -318,11 +320,13 @@ footer .footer-row{
     width: calc(100% / 3);
 } */
 
-footer .file > div{
+footer .file-playing > div{
     margin: 0 5px;
 }
-
-.file .img{
+footer .file-playing.row{
+    align-items: center;
+}
+.file-playing .img{
     width: 40px;
 }
 
@@ -332,8 +336,11 @@ footer .file > div{
     padding: 5px;
     color: #7B7D82;
 }
+footer .file-playing .file-name .title{
+    margin: 0;
+}
 /* hovers */
-.file .subtitle:hover{
+.file-playing .subtitle:hover{
     text-decoration: underline;
 }
 .file-icons > div:hover{
@@ -530,8 +537,6 @@ footer .file > div{
         justify-content: center;
     }
 
-    .file.row div{
-        align-self: center;
-    }
+   
 
 }
