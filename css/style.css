@@ -8,26 +8,26 @@
 
 
 /* DEBUG */
-.debug footer{
+/* .debug footer{
     background-color: lightblue;
     
-}
+} */
 
-.debug .main-view header{
+/* .debug .main-view header{
     
-    /* height: 3.125rem; */
-}
-.debug .main-view .main-content nav{
+    /* height: 3.125rem; 
+ */
+/* .debug .main-view .main-content nav{
     border: 2px dotted lightgreen;
-}
+} */
 /* .debug .item{
     border: 1px solid black;
     background-color: lightseagreen;
     /* height: 100px; 
 } */
-.debug .your-playlist{
+/* .debug .your-playlist{
     border: 1px dotted rgb(0, 0, 255);
-}
+} */
 
 
 /* MAIN */
@@ -47,7 +47,7 @@ aside{
     height: calc(100vh - var(--footer-height));
     color: #5e5c5c;
     font-weight: 600;
-    background-color: lightcoral;
+    background-color: black;
     
 }
 aside .row{
@@ -60,6 +60,7 @@ aside .row{
 }
 aside .row > div{
     padding: 0 10px;
+    margin: 10px 0;
 }
 
 
@@ -90,8 +91,20 @@ ul img{
     width: 1.875rem;
 }
 
-
-
+aside .row .nav-links{
+    padding-left: 0;
+}
+aside .nav-links a{
+    padding-left: 10px;
+    display: inline-block;
+}
+aside .nav-links li{
+    margin: 5px 0;
+}
+aside .nav-links a:active{
+    border-left: 3px solid greenyellow;
+    padding-left: 7.4444px;
+}
 
 /* playlist */
 .your-playlist{
@@ -103,13 +116,16 @@ ul img{
     margin-bottom: 5px;
     
 }
-.playlist{
+aside .row .playlist{
     flex-grow: 1;
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
-
+.playlist h3{
+    text-transform: uppercase;
+}
 .add-playlist-button{
     border-radius: 0;
     font-size: 2rem;
@@ -141,13 +157,16 @@ ul img{
 .download{
     border-bottom: 2px solid white;
     width: 100%;
-}
-.nav-footer{
-    height: 50px;
-    
+    padding-bottom: 10px;
 }
 
+.nav-footer .user{
+    margin-top: 5px;
 
+}
+.nav-footer .download:hover span{
+    color: white;
+}
 
 /* MAIN view */
 .main-view{ 
@@ -174,9 +193,9 @@ ul img{
 
 .main-view header .button{
     display: inline-block;
-    padding: .3125rem;
+    padding: 7px 30px;
     border: 1px solid white;
-    border-radius: .9375rem;
+    border-radius: 50px;
     line-height: normal;
 }
 .main-view header .button:hover{
@@ -198,6 +217,9 @@ ul img{
 .main-view .main-content nav{
     color: #7B7D82;
     text-align: center;
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
 }
 .main-view .main-content li{
     display: inline-block;
@@ -205,20 +227,35 @@ ul img{
     text-transform: uppercase;
     font-size: 0.75rem;
 }
+.main-view .main-content nav hr{
+    width: 50%;
+    height: 2px;
+    background-color: #141922;
+    color: #141922;
+    margin: auto;
+
+}
+.main-view .main-content li a:active hr{
+    background-color: greenyellow;
+    color: greenyellow;
+}
+
+/*  sections */
 .main-content section{
     padding: 10px 0;
 }
 
 /*    ITEMS PLAYED */
 .main-content .row{
-    margin: 0 -10px;
+    margin: 0 -5px;
 }
 .item {
     text-align: center;
 }
 .item-1-6{
-    width: calc((100%/ 6) - 10px);
-    margin: 5px;
+    width: calc((100% / 6) - 10px);
+    /* height: calc(((100vw - 230px) / 6) - 10px); */
+    margin: 10px 5px;
 }
 .item img{
     width: 100%;
@@ -229,6 +266,7 @@ ul img{
  .title{
     color: white;
     font-weight: bold;
+    margin: 10px 0;
 }
  .subtitle{
     color: grey;
@@ -351,7 +389,7 @@ footer .file > div{
     width: var(--time-elapsed);
     border-radius: 50px;
     height: 4px;
-    background-color: orange;
+    background-color: #CDCDCD;
     left: 0;
     top: 50%;
     transform: translate(0 , -50%);
@@ -368,11 +406,11 @@ footer .file > div{
 }
 .scroll-time:hover .time-elapsed{
     
-    background-color: red;
+    background-color: greenyellow;
 }
 .volume-bar:hover .current-volume{
     
-    background-color: red;
+    background-color: greenyellow;
 }
 .scroll-button{
     background-color: white;
@@ -412,7 +450,7 @@ footer .file > div{
     width: 25%;
     border-radius: 50px;
     height: 4px;
-    background-color: orange;
+    background-color: #CDCDCD;
     left: 0;
     top: 50%;
     transform: translate(0 , -50%);
@@ -430,7 +468,7 @@ footer .file > div{
 /* TABLET */
 @media screen and (max-width: 1100px) {
     .item-1-4{
-        width: calc((100% / 4) - 1.25rem);
+        width: calc((100% / 4) - 10px);
     }
 }
 
@@ -438,7 +476,7 @@ footer .file > div{
 
 @media screen and (max-width: 700px) {
     .item-1-2{
-        width: calc((100% / 2) - 1.25rem);
+        width: calc((100% / 2) - 10px);
     }
 }
 
@@ -457,6 +495,17 @@ footer .file > div{
         flex-grow: 1;
         overflow-y: hidden;
     }
+    aside .row{
+        align-items: center;
+    }
+    aside .row > div{
+        padding: 0;
+        
+    }
+    aside .nav-links a {
+        padding-left: 0;
+      }
+    
     .nav-footer span{
         display: none;
     }

@@ -50,3 +50,7 @@ li:hover{
      var(--left-nav-small)
      var(--time-elapsed)
 */
+
+body{
+    overflow-y: hidden;
+}
