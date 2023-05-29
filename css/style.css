@@ -101,14 +101,17 @@ ul img{
 /* playlist */
 .your-playlist{
     overflow-y: auto;
-    height: 50px;
+    max-height: 30vh;
+    flex-grow: 2;
 }
 .playlist *{
     margin-bottom: 5px;
 }
 .playlist{
-    flex-grow: 2;
+    
 }
+
+
 /* nav left footer */
 .nav-footer .img{
     display: inline-block;
@@ -302,7 +305,7 @@ footer .file > div{
 .play-bar.row{
     align-items: center;
     justify-content: center;
-
+    margin: 0 -5px;
 }
 
 .time-played,
